@@ -21,19 +21,19 @@ function get_tree($name = "root")
     $tree['name'] = $row['name'];
     
     //
-    $q = "SELECT * FROM member where parent_id ='" . $row['parent_id'] . "' and name not like '" . $row['name'] . "'";
+    $q = "SELECT * FROM member where parent_id ='" . $row['id'] . "' and name not like '" . $row['name'] . "'";
     $rs = mysqli_query($mysqli, $q) or die(mysqli_error($mysqli));
     $r = mysqli_fetch_assoc($rs);
     // 
-    $q2 = "SELECT * FROM member where parent_id ='" . $row['parent_id'] . "' and name not like '" . $name . "'";
+    $q2 = "SELECT * FROM member where parent_id ='" . $row['id'] . "' and name not like '" . $name . "'";
     $rs2 = mysqli_query($mysqli, $q) or die(mysqli_error($mysqli));
     $r2 = mysqli_fetch_assoc($rs);
     // 
-    $q3 = "SELECT * FROM member where parent_id ='" . $row['parent_id'] . "' and name not like '" . $name . "'";
+    $q3 = "SELECT * FROM member where parent_id ='" . $row['id'] . "' and name not like '" . $name . "'";
     $rs3 = mysqli_query($mysqli, $q) or die(mysqli_error($mysqli));
     $r3 = mysqli_fetch_assoc($rs);
     // 
-    $q4 = "SELECT * FROM member where parent_id ='" . $row['parent_id'] . "' and name not like '" . $name . "'";
+    $q4 = "SELECT * FROM member where parent_id ='" . $row['id'] . "' and name not like '" . $name . "'";
     $rs4 = mysqli_query($mysqli, $q) or die(mysqli_error($mysqli));
     $r4 = mysqli_fetch_assoc($rs);
 

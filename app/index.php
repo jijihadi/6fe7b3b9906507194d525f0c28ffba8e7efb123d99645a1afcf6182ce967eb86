@@ -9,7 +9,7 @@
 </head>
 <body>
     <p> Fungsi get_tree() <br>
-        <?php $tree = get_tree();
+        <?php $tree = get_tree('Samantha');
     echo json_encode($tree);
     ?>
     <p> Fungsi get_parents() <br>
